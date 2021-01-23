@@ -2,7 +2,23 @@ Variables: dentro de una variable se almacenan datos, a los que se puede acceder
 Strings: son bloques o cadenas de texto, es un tipo de variable, basicamente letras
 Funciones (argumentos, return): son operaciones definidas por el programador que al ejecutarse, devuelven un valor, es decir da un resultado,
 eso se hace con la funcion return que es la unica forma de obtener en pantalla un dato de dentro de la funcion. 
-los argumentos son las variables con las que la funcion va a operar
+los argumentos son las "variables" con las que la funcion va a operar y las comillas están, porque no es necesario definir variables en verdad.
+
+definir una variable perro seria lo siguiente
+perro="perro"
+eso seria definirla. Se crea un bloque que almacena un dato. La variable contine al string,
+y siempre perro va a ser "perro" (en realidad como javascript es un lenguaje de tipado dinamico, 
+las variables pueden reasignarse incluso cambiando el tipo y que ya no sea un str), pero es necesario una asignacion o en todo caso una reasignacion.
+EN CAMBIO el parametro de la funcion: que es lo que esta entre parentesis, representa un valor que cambia 
+segun el imput: VOS NO NECESITAS CREAR LA VARIABLE PERRO,  para poner a prueba la funcion
+NO  necesias definir la variable, porque vos no estas haciendo eso,estas ASIGNANDOLE valores random, al parametro de la funcion,
+que en este caso es de tipo str
+entonces para probar la funcion, podes poner"perro""nariz""gato" y da igual, sin necesidad de definir ninguna variable. 
+porque el argumento de la funcion es eso basicamente, vos le vas a dar un dato a la funcion
+para que se la coma  y cague, y te devuelva un resultado (que solo puedo obtener en pantalla con return), 
+y ese dato puede ser cualquiera que yo quiera poner en el argumento siempre y cuando sea un string EN ESTE CASO.
+
+
 Declaraciones if: es una condicion, solo si se cumple tal condicion (la que se encuentra entre paréntesis) se ejecuta cierta accion
 Valores booleanos (true, false): son valores restringidos a solo dos posibilidades, si no es uno es otro, si no es falso es verdadero
 for: es para crear un bucle, es decir, que se volvera a ejecutar el codigo en tanto sigan estando ciertas condiciones seteadas.
