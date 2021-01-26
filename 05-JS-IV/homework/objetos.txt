@@ -1,0 +1,60 @@
+Objetos: es un contenedor de datos, como los array, con la diferencia de que contiene muchos datos de un mismo elemento, 
+utilizando el formate clave:valor, estos valores pueder cualquier tipo de dato, numero, str, booleano, etc
+se crean utilizando {}. todo en JavaScript es un ojeto. Un objeto tiene caracteristicas o propiedades/atributos: que me 
+dan información sobre CÓMO es el objeto y tinen métodos que me dicen QUÉ HACE el objeto.
+
+
+Propiedades: Cómo es el objeto? las propiedades son los pares /clave: valor/ declarados como VARIABLES pero con : en vez de =, estas variables 
+pueden ser str numeros booleanos, arrays en incluso otro objeto
+EJEMPO DE PROPIEDAD 
+const persona = {                                                             //TODAS SON DECLARACIONES DE VARIABLES
+    nombre:"keteimporta",                                                     ---string como valor
+    siente_amor: true,                                                        ---boolean como valor                                                       
+    hobbies: algunos["ver el atardecer", "qué son hobbies?", "leer"],        ---array como valor
+    gatos {                                                                  ---objeto como valor
+        bebes:3["Biskuito","Chikito", "nena"]
+        adultos {                                                            ---obj adultos dentro de obj gatos dentro de obj persona
+            nombres:["Lobo", "Tita]
+            luckily: "se comportan como niños"
+        }
+    }
+
+}
+
+
+Método: qué hace el objeto? los métodos son los pares clave_valor que son FUNCIONES
+EJEMPLO DE Método
+const persona = {
+    nombre:"keteimporta",                                                     
+    siente_amor= true,                                                                                                               
+    hobbies: algunos["ver el atardecer", "qué son hobbies?", "leer"],         
+    gatos{                                                            
+        bebes:3["Biskuito","Chikito", "nena"],
+        adultos {                                                          
+            nombres:["Lobo", "Tita]
+            luckily: "se comportan como niños"
+            function lluvia(){
+              return ("nos gusta el olor de la lluvia")                             ---lo q hace el obj adultos es lo q declara la f lluvia
+        },                                                                                   que es imprimir "nos gusta el olor de la lluvia"    }
+    function morder(){                                                                    ---lo q hace el obj persona es decirte lo q declara la funcion
+        return (this.gatos.adultos.nombres[0] + " va a morderte si lo molestas"  )       que lobo va a morderte si lo molestas
+    },
+}
+
+
+
+Bucle for…in: para poder recorrer los elementos de un objeto necesitamos poder recorrer las claves y sus respectivos
+valores DENTRO del objeto, por eso se utiliza  for ( const/let clave in persona){
+                                                   console.log (clave + " " + persona.clave) 
+                                                   }
+
+
+Notación de puntos vs notación de corchetes: ambas se usan para invocar una propiedad o metodo de un objeto, al método, como es una funcion, habriamos de agregarle ().
+la notacion de puntos se una nombrando al objeto seguido de un punto seguido de la clave: 
+EJEMPLO NOTACION DE PUNTOS:
+console.log (persona.siente_amor) ---------------- la consola imprimira true
+
+mientras que la notacion de corchetes, funciona como cuando llamabamos a un elemento de un array por su posicion
+solo que en los objetos deberemos poner entre corchetes la clave. 
+EJEMPLO NOTACION CON CORCHETES:
+console.log (persona["nombre"]) ------------------ la consola imprimirá "keteimporta"
