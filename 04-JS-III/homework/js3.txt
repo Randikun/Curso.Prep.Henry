@@ -1,5 +1,0 @@
-array: un array es basicamente una lista, donde hay elementos. Estos elementos son ennumerados con un indice, mediante el cual se puede acceder a ellos.
-Esto es una matriz (conjunto de elementos ordenados e identificados) y existen operaciones con las que se pueden trabajar las matrices. 
-trabajar con el conjunto de elementos es mucho mas conveniente en ocasiones que crear una variable para cada elemento, por eso los arrays son imortantes.
-Ademas un array, en su conjunto de elementos puede contener otros Arrays por lo que podria ser una buena herramienta para clasificar elementos en conjuntos.
- 

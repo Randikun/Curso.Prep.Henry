@@ -17,12 +17,3 @@ entonces para probar la funcion, podes poner"perro""nariz""gato" y da igual, sin
 porque el argumento de la funcion es eso basicamente, vos le vas a dar un dato a la funcion
 para que se la coma  y cague, y te devuelva un resultado (que solo puedo obtener en pantalla con return), 
 y ese dato puede ser cualquiera que yo quiera poner en el argumento siempre y cuando sea un string EN ESTE CASO.
-
-
-Declaraciones if: es una condicion, solo si se cumple tal condicion (la que se encuentra entre paréntesis) se ejecuta cierta accion
-Valores booleanos (true, false): son valores restringidos a solo dos posibilidades, si no es uno es otro, si no es falso es verdadero
-for: es para crear un bucle, es decir, que se volvera a ejecutar el codigo en tanto sigan estando ciertas condiciones seteadas.
- es importante definir bien dichas condiciones para no crear un bucle infinito
- &&: and. quiere decir que ambas condiciones se cumplen si una de las opciones no cumple la condicion entonces para de ejecutarse, porque todas deben cumplirse, o bien para todos los valores debe cumplirse una condicion
-||: or. es decir, si alguna de las variables cumple con la condicion ya es suficiente, si no es una y es la otra puede ejecutarse el codigo, si ninguna la cumple, no se ejecutara
-!: es la negación de lo que viene. por ejemplo, si esto es igual == entonces esto !== es distinto
