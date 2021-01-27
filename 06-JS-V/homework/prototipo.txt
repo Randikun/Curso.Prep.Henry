@@ -1,0 +1,120 @@
+
+
+ Uno podria crear un objeto cualquiera, arboles, por decir alguno 
+ y que tenga como parámetros y caracteristicas
+
+const Arboles = function (color, altura, forma) {
+         this.color = color,
+         this.altura = altura,
+         this.forma = forma,
+};
+        
+ 
+ 
+ podria decir muchas cosas más que caracterizan a los arboles pero también 
+ a los arbustos, el pasto, cualquier serVegetal en general,
+ entonces en vez de repetir el codigo para atribuir esas caracteristicas comunes
+ a los muchisimos seres vivientes que encuentres;  una y otra vez;
+
+ se crea un objeto SerVegetal,     que las contiene a todas,      observad la mayúscula
+
+ const SerVegetal= function (vidaMedia, respiracion) {
+     this.vidaMedia = vidaMedia,
+     this respiracion = respiracion,
+    };
+ 
+y decir  Arboles, pertenece a SerVegetal
+
+const Arboles = new SerVegetal (this.color, this.altura, thisForma, this.vidaMedia, this.respiracion)
+
+entonces ahora nuestra const arboles tiene incorporadas tmb las propiedades
+las plantas en general  y es por eso que tmb puede recibir esos parámetros
+  
+
+ despues solo tengo que decir
+ hey! mira este Coihue,
+ ah bueno vos vas a ser el objeto coihue;
+ tenes tu propia forma de vida por eso sos un objeto también
+
+ const coihue  {
+     sonido: "puertas que se abren y cierran",
+     altura: 33,
+ }
+
+
+ te voy a poner en el cajon de los arboles,
+
+ let coihue = new Arboles (this.color, this.altura, this.forma, this.vidaMedia, this.respiracion)
+
+ que es nuestro objeto que acepta parametros
+
+ (color, altura, forma) por ser arbol y (vidaMedia y respiración) por ser un SerVegetal
+
+
+eso de alguna manera seria trabajar la herencia con clases, pero en realidad se usa el concepto de prototypos
+es decir JavaScript trabaja con prototipos internamente, las clases se agregaron en una actualizacion solo para facilitar
+el uso a quienes ya saben otros lenguajes y estaban acostumbrados al uso de clases.
+
+la idea de prototipo en realidad es sencilla si pensamos en que en Javascript todo es un objeto.
+cuando yo pongo "cuadrado" la consola me dice que es un dato tipo str mencionandome su prototypo
+prototype  str
+
+por lo que todas las caracteristicas y metodos  de los str (como .length)
+se atribuyen a mi "cuadrado"
+
+y si inspecciono el prototype de mi coihue me aparecera que es prototype Arboles, SerVegetal
+
+es como si su ficha contuviese a Arboles y SerVegetal y aunque yo hable solo del coihue, 
+existe otra informacion por detras que se incluye en su prototipo, entonces puedo agregar un método, 
+no al objeto, sino al prototipo. Este no se ejecutaria cada vez que usemos el objeto, sino al invocar la 
+funcion particularmente. 
+
+para eso usamos .prototype
+
+SerVegetal.prototype.identidad = function (vidaMedia) {
+
+  console.log (" mi  esperanza de vida es " + this.vidaMedia + " y soy muy importante para el ecosistema");
+}
+
+y aunque el método esta asignado al prototypo en verdad, como coihue esta contenido en ese prototipo
+puedo invocar a la funcion identidad, que seriviria para cualquier objeto que yo relacione al prototipo SerVegetal
+
+como
+
+ let coihue = new Arboles (color, altura, forma, vidaMedia, respiracion)
+
+coihue.identidad ("infinitos años")
+"mi esperanza de vida es infinitos años y soy muy importante para el ecosistema"
+
+ENTONCES PARA QUE ARBOLES PERTENEZCA A SER VEGETAL, Y A SU VEZ ADMITA OTROS OBJETOS DENTRO DE SÍ (sea tambien un prototipo)
+creo el constructor
+
+Arboles.prototype = object.create (SerVegetal.prototype)
+Arboles.prototype.constructor = Arboles
+
+let alamo = new Arboles ( "verde oscuro", "33m", "alargado", "30 años", "regalo O2")
+
+alamo.identidad()
+"mi esperanza de vida es 30 años y soy muy importante para el ecosistema"
+
+la diferencia entre prototype y clase pareciera difusa, porque en el fondo JS siempre trabaja con prototipos aunque 
+mentalmente y métodicamente estemos "creando clases", internamente js esta creando objetos y definiendolos como prototipos
+guardando informacion en esos prototipos que pueden heredarse a un new objeto o bien llamarse, con el metodo call,
+llamar esas propiedades, sin necesidad de relacionar a nuestro objeto con ese prototipo, en ese caso los metodos no se transferirian como recién.
+
+ejemplo
+
+function Arbustos (this, vidaMedia, respiracion, follaje){
+    SerVegetal.call(this, vidaMedia, respiracion)
+    follaje = follaje
+}
+
+
+Arbustos.identidad()
+error------- porque identidad es un metodo asociado al prototipo serVegetal y Arbustos no esta asociado a SerVegetal
+el call solo llamo sus propiedades y las adjunto tmb a arbustos, pero no metió a los arbustos dentro del conjunto de SerVegetal
+entonces el prototipo SerVegetal no tiene efecto sobre los Arbustos, y los métodos no se asocian.
+
+
+
+
