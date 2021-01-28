@@ -1,0 +1,1 @@
+Funciones Callback: estas funciones reciben como argumento otra función, y se pueden invocar en cualquier momento. Se pueden anidar entre si. Así por ejemplo se puede crear una función callback, que reciba un argumento cualquiera y una cb, y esa cb puede ser cualquier funcion. entonces para un mismo valor de argumento puedo invocar distintas funciones.
