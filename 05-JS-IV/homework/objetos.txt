@@ -7,18 +7,20 @@ dan información sobre CÓMO es el objeto y tinen métodos que me dicen QUÉ HAC
 Propiedades: Cómo es el objeto? las propiedades son los pares /clave: valor/ declarados como VARIABLES pero con : en vez de =, estas variables 
 pueden ser str numeros booleanos, arrays en incluso otro objeto
 EJEMPO DE PROPIEDAD 
-const persona = {                                                             //TODAS SON DECLARACIONES DE VARIABLES
-    nombre:"keteimporta",                                                     ---string como valor
-    siente_amor: true,                                                        ---boolean como valor                                                       
-    hobbies: algunos["ver el atardecer", "qué son hobbies?", "leer"],        ---array como valor
-    gatos {                                                                  ---objeto como valor
-        bebes:3["Biskuito","Chikito", "nena"]
-        adultos {                                                            ---obj adultos dentro de obj gatos dentro de obj persona
-            nombres:["Lobo", "Tita]
-            luckily: "se comportan como niños"
+  const persona = {
+    nombre:"keteimporta",                                                     
+    siente_amor: true,                                                                                                               
+    hobbies: ["ver el atardecer", "qué son hobbies?", "leer"],  
+    gatos : {                                                            
+        bebes: ["Biskuito","Chikito", "nena"],
+        adultos : {                                                          
+            nombres:["Lobo", "Tita"],
+            luckily: "se comportan como niños",
+            sensaciones : function(){
+              return ("nos gusta el olor de la lluvia");                       
+            }                                                                             
         }
-    }
-
+    } 
 }
 
 
@@ -26,21 +28,21 @@ Método: qué hace el objeto? los métodos son los pares clave_valor que son FUN
 EJEMPLO DE Método
 const persona = {
     nombre:"keteimporta",                                                     
-    siente_amor= true,                                                                                                               
-    hobbies: algunos["ver el atardecer", "qué son hobbies?", "leer"],         
-    gatos{                                                            
-        bebes:3["Biskuito","Chikito", "nena"],
-        adultos {                                                          
-            nombres:["Lobo", "Tita]
-            luckily: "se comportan como niños"
-            function lluvia(){
-              return ("nos gusta el olor de la lluvia")                             ---lo q hace el obj adultos es lo q declara la f lluvia
-        },                                                                                   que es imprimir "nos gusta el olor de la lluvia"    }
-    function morder(){                                                                    ---lo q hace el obj persona es decirte lo q declara la funcion
-        return (this.gatos.adultos.nombres[0] + " va a morderte si lo molestas"  )       que lobo va a morderte si lo molestas
-    },
+    siente_amor: true,                                                                                                               
+    hobbies: ["ver el atardecer", "qué son hobbies?", "leer"],  
+    morder: function() {                                                                  
+        console.log(" va a morderte si lo molestas")},    //--------------EL METODO ES UNA FUNCION, ESTA PERSONA TE ESTA AVISANDO
+    gatos : {                                                            
+        bebes: ["Biskuito","Chikito", "nena"],
+        adultos : {                                                          
+            nombres:["Lobo", "Tita"],
+            luckily: "se comportan como niños",
+            sensaciones : function(){
+              return ("nos gusta el olor de la lluvia");                       
+            }                                                                             
+        }
+    } 
 }
-
 
 
 Bucle for…in: para poder recorrer los elementos de un objeto necesitamos poder recorrer las claves y sus respectivos
