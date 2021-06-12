@@ -1,7 +1,22 @@
-Declaraciones if: es una condicion, solo si se cumple tal condicion (la que se encuentra entre paréntesis) se ejecuta cierta accion
+Declaraciones if: es una condición, solo si se cumple tal condición (la que se encuentra entre paréntesis) 
+se ejecuta el bloque de código a continuación, {entre corchetes}
 Valores booleanos (true, false): son valores restringidos a solo dos posibilidades, si no es uno es otro, si no es falso es verdadero
-for: es para crear un bucle, es decir, que se volvera a ejecutar el codigo en tanto sigan estando ciertas condiciones seteadas.
- es importante definir bien dichas condiciones para no crear un bucle infinito
- &&: and. quiere decir que ambas condiciones se cumplen si una de las opciones no cumple la condicion entonces para de ejecutarse, porque todas deben cumplirse, o bien para todos los valores debe cumplirse una condicion
-||: or. es decir, si alguna de las variables cumple con la condicion ya es suficiente, si no es una y es la otra puede ejecutarse el codigo, si ninguna la cumple, no se ejecutara
+while: es para crear un bucle, es decir, que se volverá a ejecutar el código en tanto se sigan cumpliendo las condiciones entre paréntesis. o bien break; de lo contrario, se ejecutaría infinitamente
+for: es como un while en el sentido de que ambos son bucles, pero en los for se especifica la cantidad de veces que se va a iterar
+primero se define una variable, luego la condicion, y luego la cantidad de veces a iterar. el bucle for va a recorrer el array u objeto; y por cada iteración, la variable (comunmente i) va a adoptar el valor del elemento que este siendo iterado en ese momento.
+en el caso de 
+
+for animal  in Animales----el valor de animal, es la POSICION de ese elemento
+
+mientras que 
+
+for animal of Animales----el valor de animal es EL elemento
+
+
+ &&: and. quiere decir que ambas condiciones se cumplen. Si una de las condiciones no se cumple entonces es false y en caso de ser un bucle: para de ejecutarse, 
+ porque la condición de un while o for debe ser true para que el codigo del bloque se ejecute y aunque haya una true, si alguna no se cumple, entonces false.
+ 
+||: or. es decir, si alguna de las condiciones se cumple, ya es suficiente: devuelve true. si no es una, es la otra: puede ejecutarse el código, si ninguna la cumple, no se ejecutará.
+
 !: es la negación de lo que viene. por ejemplo, si esto es igual == entonces esto !== es distinto
+si esto es true entonces !true es false

@@ -1,9 +1,9 @@
 LAS CLASES SON FUNCIONES CONSTRUCTORAS O FUNCIONES PROTOTIPICAS
 
- Uno podria crear un objeto cualquiera, arboles, por decir alguno 
+ Uno podria crear un objeto cualquiera, arbol, por decir alguno 
  y que tenga como parámetros y caracteristicas
 
-const Arboles = function (color, altura, forma) {
+const arbol = function (color, altura, forma) {
          this.color = color;
          this.altura = altura;
          this.forma = forma;
@@ -11,60 +11,50 @@ const Arboles = function (color, altura, forma) {
         
  
  
- podria decir muchas cosas más que caracterizan a los arboles pero también 
- a los arbustos, el pasto, cualquier serVegetal en general,
- entonces en vez de repetir el codigo para atribuir esas caracteristicas comunes
- a los muchisimos seres vivientes que encuentres;  una y otra vez;
+ podría decir muchas cosas más que caracterizan a los árboles pero también 
+ a los arbustos, al pasto, cualquier ser VEGETAL en general,
+ entonces en vez de repetir el código para atribuir esas características comunes
+ a los muchísimos seres vegetales que encuentres;  una y otra vez;
 
- se crea un objeto SerVegetal,     que las contiene a todas,      observad la mayúscula, 
+ se crea una clase SerVegetal,     que los contiene a todos,      observad la mayúscula, 
 
 class SerVegetal {
-    constructor(vidaMedia, respiracion) {
-        this.vidaMedia = vidaMedia,
-            this; respiracion = respiracion,
-            ;
+    constructor(vidaMedia, respiración) {
+         this.vidaMedia = vidaMedia,
+         this.respiracion = respiracion;
     }
 }
  
-y decir  Arboles, pertenece a SerVegetal
+y decir  arbol, pertenece a SerVegetal
 
-Arboles es una instancia de SerVegetal, por lo que hereda sus propiedades, de esta forma:
-
-class SerVegetal {
-    constructor(vidaMedia, respiracion) {
-        this.vidaMedia = vidaMedia;
-            this.respiracion = respiracion;
-     }
-}
+Arbol es una instancia de SerVegetal, por lo que hereda sus propiedades, de esta forma:
 
 
-class Arboles extends SerVegetal{
-    constructor(color, altura, forma) {
-        super();
-        super.vidaMedia;
-        super.respiracion;
+class Arbol extends SerVegetal{
+    constructor(vidaMedia, respiracion, color, altura, forma) {
+        super(vidaMedia, respiracion);
         this.color = color;
         this.altura = altura;
         this.forma = forma;
     }
 }
 
-entonces ahora nuestra const arboles tiene incorporadas tmb las propiedades
+entonces ahora nuestra const arbol tiene incorporadas tmb las propiedades de
 las plantas en general  y es por eso que tmb puede recibir esos parámetros
   
 
- despues solo tengo que decir
+ después solo tengo que decir
  hey! mira este Coihue,
  ah bueno vos vas a ser el objeto coihue;
- tenes tu propia forma de vida por eso sos un objeto también
 
- te voy a poner en el cajon de los arboles,
+ te voy a poner en el cajón del Arbol, que es a su vez un serVegetal
 
- let coihue = new Arboles ("ceniza", "33", "alargado", "vivo más que vos, seguro", "02paVOS")
+ const coihue = new Arbol ("vivo más que vos, seguro", "02paVOS","ceniza", "33", "alargado")
 
- que es nuestro objeto que acepta parametros (es una clase)
-
- (color, altura, forma) por ser arbol y (vidaMedia y respiración) por ser un SerVegetal
+ que es nuestro objeto que acepta parametros  
+ (color, altura, forma) por ser arbol 
+ y
+ (vidaMedia y respiración) por ser un SerVegetal
 
 
 eso de alguna manera seria trabajar la herencia con clases

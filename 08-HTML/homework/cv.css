@@ -1,0 +1,132 @@
+#contenedor {
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "main   main   aside" 
+    "main   main   aside"
+    "main   main   aside"
+    "footer footer footer";
+}
+
+.header {
+    grid-area: header;
+    background-color:  #FFCAD4;
+    width: 100%;
+    box-sizing: border-box;
+    border: solid #9D8189;
+    font-family: 'Roboto', sans-serif;
+         
+}
+.main {
+    grid-area: main;
+    width: 600px;
+    position: relative;
+    background-color: #ffe5d9;
+    box-sizing: border-box;
+    border: solid #9D8189;
+    font-family: 'Roboto', sans-serif;
+    
+
+}
+.aside {
+    grid-area:aside;
+    position: relative;
+    background-color: #ffe5d9;
+    width: 600px;
+    box-sizing: border-box;
+    border: solid #9D8189;
+    font-family: 'Roboto', sans-serif;
+}
+.footer {
+    grid-area: footer;
+    width: 100%;
+    background-color: #FFCAD4;
+    box-sizing: border-box;
+    border:solid #9D8189;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+
+    margin: 60px;
+    margin-top: 30px;
+    background-color: #F4ACB7;
+    border: solid #9D8189 6px;
+    width: 1200px;
+}
+
+h1{
+    text-align: center;
+    font-size: 75px;
+    font-family: 'Montserrat', sans-serif;
+}
+#foto {
+    display: inline-block;
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border: solid 4px #9D8189;
+    margin: auto;
+    position: relative;
+    left: 200px;
+    top: -10px;
+}
+img {
+    width: 200px;
+    height: 250px;
+    filter: brightness(0,3);
+}
+#datosPersonales {
+    display: inline-block;
+    position: relative;
+    width: 500px;
+    height: 200px;
+    left: 400px;
+    top: -60px;
+    border: solid 4px;
+    border-color:  #9D8189;
+    padding: 20px;
+    font-size: 20px;
+    background-color:#D8E2DC;
+    color:#000;
+    font-family: 'Roboto', sans-serif;
+    text-align:auto;
+    margin: left 20px;
+    
+}
+h3{
+    margin-top: 0;
+    line-height: 2;
+    background-color:#9D8189;
+    color:#000;
+    text-align:center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+      
+}
+h4{
+    margin-top: 0;
+    line-height: 2;
+    text-align: center;
+    background-color:#9D8189;
+    color:#000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+#skills {
+    padding: 20px;
+}
+#formacion {
+    padding: 20px;
+}
+#experienciaLaboral {
+    padding: 20px;
+}
+#idiomas{
+    padding: 20px;
+}
+#hobbies {
+    padding: 20px;
+}
+#henry {
+    padding: 20px;
+}

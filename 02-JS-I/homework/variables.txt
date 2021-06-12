@@ -1,19 +1,25 @@
-Variables: dentro de una variable se almacenan datos, a los que se puede acceder, o se pueden llamar, utilizando el nombre de la variable 
-Strings: son bloques o cadenas de texto, es un tipo de variable, basicamente letras
-Funciones (argumentos, return): son operaciones definidas por el programador que al ejecutarse, devuelven un valor, es decir da un resultado,
-eso se hace con la funcion return que es la unica forma de obtener en pantalla un dato de dentro de la funcion. 
-los argumentos son las "variables" con las que la funcion va a operar y las comillas están, porque no es necesario definir variables en verdad.
+Variable: dentro de una variable se almacenan un dato, al que se puede acceder, o se puede llamar, utilizando el nombre de la variable 
+Strings: son bloques o cadenas de texto, es un tipo de variable, básicamente letras
+Funciones (argumentos, return): son bloques de código que al ejecutarse, devuelven un valor, es decir dan un resultado, y pueden ejecutarse solo llamando a la función
+sin tener que reescribir código. 
+return es la única forma de obtener en pantalla un dato de dentro de la función. Lo que hace return es asignarle a esa función un valor, que es el resultado. 
+Los argumentos son las variables con las que la función va a operar, pero no es necesario definir variables por fuera de la función.
 
-definir una variable perro seria lo siguiente
-perro="perro"
-eso seria definirla. Se crea un bloque que almacena un dato. La variable contine al string,
-y siempre perro va a ser "perro" (en realidad como javascript es un lenguaje de tipado dinamico, 
-las variables pueden reasignarse incluso cambiando el tipo y que ya no sea un str), pero es necesario una asignacion o en todo caso una reasignacion.
-EN CAMBIO el parametro de la funcion: que es lo que esta entre parentesis, representa un valor que cambia 
-segun el imput: VOS NO NECESITAS CREAR LA VARIABLE PERRO,  para poner a prueba la funcion
-NO  necesias definir la variable, porque vos no estas haciendo eso,estas ASIGNANDOLE valores random, al parametro de la funcion,
-que en este caso es de tipo str
-entonces para probar la funcion, podes poner"perro""nariz""gato" y da igual, sin necesidad de definir ninguna variable. 
-porque el argumento de la funcion es eso basicamente, vos le vas a dar un dato a la funcion
-para que se la coma  y cague, y te devuelva un resultado (que solo puedo obtener en pantalla con return), 
-y ese dato puede ser cualquiera que yo quiera poner en el argumento siempre y cuando sea un string EN ESTE CASO.
+crear una variable seria lo siguiente
+
+
+let nombre=
+
+esta variable esta declarada pero aun no está inicializada, lo que sería:
+
+nombre= "Guadalupe"
+
+
+Se crea un bloque que almacena un dato. La variable contiene al string,
+y siempre nombre va a ser "Guadalupe" (en realidad como javascript es un lenguaje de tipado dinamico, 
+las variables pueden reasignarse incluso cambiando el tipo y que ya no sea un str, pero es necesario en todo caso una reasignación).
+Al darle un parámetro o argumento a la función, estamos creando una variable que se inicializará cada vez que se llame a la función
+
+NO  necesitas definir la variable, por fuera porque ya se está creando dentro del ámbito de la función
+
+entonces para ejecutar la función, podes poner cualquier argumento y este se asignara como valor de esa variable que hasta entonces estaba indefinida.
